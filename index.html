@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NESTRO — Your Restaurant. One Smart System.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+            color: #0f172a;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .landing-card {
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+            padding: 48px;
+            max-width: 480px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+        .logo-badge {
+            background: #0f172a;
+            color: #ffffff;
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0 auto 24px;
+            box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.2);
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            margin: 0 0 8px;
+            letter-spacing: -0.5px;
+        }
+        p.tagline {
+            color: #64748b;
+            font-size: 15px;
+            margin: 0 0 36px;
+        }
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 14px 20px;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary {
+            background: #0f172a;
+            color: #ffffff;
+            box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.1);
+        }
+        .btn-primary:hover {
+            background: #1e293b;
+            transform: translateY(-1px);
+        }
+        .btn-outline {
+            background: #ffffff;
+            color: #0f172a;
+            border: 1px solid #cbd5e1;
+        }
+        .btn-outline:hover {
+            background: #f1f5f9;
+            border-color: #94a3b8;
+        }
+        .footer-note {
+            margin-top: 32px;
+            font-size: 13px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-card">
+        <div class="logo-badge">N</div>
+        <h1>NESTRO</h1>
+        <p class="tagline">Your Restaurant. One Smart System.</p>
+        
+        <div class="btn-group">
+            <a href="admin/dashboard.html" class="btn btn-primary">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                Admin POS & Dashboard
+            </a>
+            <a href="customer/menu.html?restaurant=restaurant001&table=table05" class="btn btn-outline">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                Customer QR Ordering (Demo Table 05)
+            </a>
+            <a href="kitchen/display.html" class="btn btn-outline">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                Kitchen Display System (KDS)
+            </a>
+        </div>
+        
+        <div class="footer-note">
+            Production-Ready Architecture • Firebase & Cloudinary Enabled
+        </div>
+    </div>
+</body>
+</html>
