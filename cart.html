@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart — NESTRO QR Ordering</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/customer.css">
+</head>
+<body class="customer-body">
+    <div class="mobile-frame" style="justify-content: space-between;">
+        <div>
+            <div class="mobile-header">
+                <a href="menu.html" style="font-weight: 600; font-size: 14px;">← Back</a>
+                <div class="mobile-title">Your Cart</div>
+                <div></div>
+            </div>
+
+            <div style="padding: 24px;">
+                <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 12px;">
+                        <div>
+                            <div style="font-weight: 600; font-size: 14px;">Grilled Chicken Breast</div>
+                            <div style="color: var(--text-muted); font-size: 13px;">₹349 x 1</div>
+                        </div>
+                        <div style="font-weight: 700;">₹349</div>
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 12px;">
+                        <div>
+                            <div style="font-weight: 600; font-size: 14px;">Hyderabadi Dum Biryani</div>
+                            <div style="color: var(--text-muted); font-size: 13px;">₹299 x 1</div>
+                        </div>
+                        <div style="font-weight: 700;">₹299</div>
+                    </div>
+                </div>
+
+                <div style="background: #f8fafc; padding: 16px; border-radius: 12px; display: flex; flex-direction: column; gap: 8px;">
+                    <div style="display: flex; justify-content: space-between; font-size: 14px;">
+                        <span style="color: var(--text-muted);">Subtotal</span>
+                        <span style="font-weight: 600;">₹648</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; font-size: 14px;">
+                        <span style="color: var(--text-muted);">GST (5%)</span>
+                        <span style="font-weight: 600;">₹32.40</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; font-size: 16px; font-weight: 700; border-top: 1px solid var(--border); padding-top: 8px; margin-top: 4px;">
+                        <span>Total Payable</span>
+                        <span>₹680.40</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="padding: 24px;">
+            <button class="btn-add-cart" style="width: 100%; padding: 16px; font-size: 16px; border-radius: 12px;" onclick="window.location.href='order-status.html'">
+                Place Order (Table 05)
+            </button>
+        </div>
+    </div>
+</body>
+</html>

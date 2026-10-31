@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu — NESTRO QR Ordering</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/customer.css">
+    <style>
+        .cust-header-bar {
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 20;
+        }
+        .hero-banner {
+            margin: 0 24px 20px;
+            border-radius: 24px;
+            overflow: hidden;
+            position: relative;
+            background: #0f172a;
+            color: white;
+            padding: 24px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+        .hero-banner img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin-top: 12px;
+        }
+    </style>
+</head>
+<body class="customer-body">
+    <div class="mobile-frame">
+        <div class="cust-header-bar">
+            <div>
+                <div style="font-size: 11px; color: var(--text-muted); font-weight: 700; letter-spacing: 0.5px;">TABLE 05 • DINE IN</div>
+                <div class="mobile-title" style="font-size: 20px; font-weight: 700;">NESTRO Bistro</div>
+            </div>
+            <div style="background: #f1f5f9; width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px;">
+                🔔
+            </div>
+        </div>
+
+        <div class="hero-banner">
+            <div style="font-size: 13px; color: #cbd5e1; font-weight: 500;">Chef's Special Today</div>
+            <div style="font-size: 18px; font-weight: 700; margin-top: 2px;">Grilled Chicken Breast</div>
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Grilled Chicken">
+        </div>
+
+        <div class="category-scroll">
+            <button class="cat-pill active">All Items</button>
+            <button class="cat-pill">Starters</button>
+            <button class="cat-pill">Biryani</button>
+            <button class="cat-pill">Main Course</button>
+            <button class="cat-pill">Beverages</button>
+        </div>
+
+        <div class="product-grid-cust">
+            <div class="cust-product-card">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" class="cust-product-img">
+                <div class="cust-product-info">
+                    <div>
+                        <div class="cust-product-name">Grilled Chicken Breast</div>
+                        <div class="cust-product-price">₹349</div>
+                    </div>
+                    <button class="btn-add-cart" onclick="addToCart('Grilled Chicken Breast', 349)">+ Add</button>
+                </div>
+            </div>
+            <div class="cust-product-card">
+                <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8" class="cust-product-img">
+                <div class="cust-product-info">
+                    <div>
+                        <div class="cust-product-name">Hyderabadi Dum Biryani</div>
+                        <div class="cust-product-price">₹299</div>
+                    </div>
+                    <button class="btn-add-cart" onclick="addToCart('Hyderabadi Dum Biryani', 299)">+ Add</button>
+                </div>
+            </div>
+            <div class="cust-product-card">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5" class="cust-product-img">
+                <div class="cust-product-info">
+                    <div>
+                        <div class="cust-product-name">Crunchy Taco Supreme</div>
+                        <div class="cust-product-price">₹199</div>
+                    </div>
+                    <button class="btn-add-cart" onclick="addToCart('Crunchy Taco Supreme', 199)">+ Add</button>
+                </div>
+            </div>
+            <div class="cust-product-card">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" class="cust-product-img">
+                <div class="cust-product-info">
+                    <div>
+                        <div class="cust-product-name">Woodfired Pepperoni Pizza</div>
+                        <div class="cust-product-price">₹449</div>
+                    </div>
+                    <button class="btn-add-cart" onclick="addToCart('Woodfired Pepperoni Pizza', 449)">+ Add</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-bar" onclick="window.location.href='cart.html'">
+            <span style="display: flex; align-items: center; gap: 8px;">🛒 <span id="cart-count">2</span> Items in Cart</span>
+            <span style="font-weight: 700;">₹648 →</span>
+        </div>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <script>
+        let cartCount = 2;
+        function addToCart(name, price) {
+            cartCount++;
+            document.getElementById('cart-count').innerText = cartCount;
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.innerHTML = `<span>✓ Added ${name} (₹${price})</span>`;
+            container.appendChild(toast);
+            setTimeout(() => toast.remove(), 3000);
+        }
+    </script>
+</body>
+</html>
